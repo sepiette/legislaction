@@ -2,7 +2,12 @@
   "name": "legislaction",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "yarn": "1.22.x",
+    "node": "13.12.x"
+  },
   "dependencies": {
+    "@mars/heroku-js-runtime-env": "^3.0.2",
     "@material-ui/core": "^4.10.1",
     "@material-ui/styles": "^4.10.0",
     "@testing-library/jest-dom": "^4.2.4",
