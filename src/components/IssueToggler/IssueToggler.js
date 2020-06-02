@@ -1,28 +1,22 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+
 import { Tabs, Tab } from '@material-ui/core';
-import { TabPanel } from '@material-ui/lab';
+import { TabPanel, TabContext } from '@material-ui/lab';
 
 const IssueToggler = (props) => {
   console.log('props', props);
-  const { updateTabView, tabValue } = props;
-
-  const ISSUES = [
-    {
-      label: 'Repeal 50a and the Police STAT Act',
-      value: 'repeal-bills',
-    },
-    {
-      label: 'Defund the NYPD',
-      value: 'defund-nypd',
-    },
-    {
-      label: 'Other Issue',
-      value: 'other-issue',
-    },
-  ];
+  const { issues, updateTabView, tabValue } = props;
+  const [subTabValue, updateSubTabValue] = useState(
+    tabValue.subTabs ? tabValue.subTabs[0] : null
+  );
 
   const handleOnChange = (e, newVal) => {
     updateTabView(newVal);
+  };
+
+  const handleSubTabChange = (e, newVal) => {
+    updateSubTabValue(newVal);
   };
 
   return (
@@ -35,9 +29,8 @@ const IssueToggler = (props) => {
         scrollButtons="auto"
         indicatorColor="primary"
         textColor="primary"
-        classes="mt-64 mb-64"
       >
-        {ISSUES.map((issue) => (
+        {issues.map((issue) => (
           <Tab
             key={`tab-${issue.value}`}
             label={issue.label}
@@ -45,10 +38,30 @@ const IssueToggler = (props) => {
           />
         ))}
       </Tabs>
-      {ISSUES.map((issue) => (
+      {issues.map((issue) => (
         <TabPanel key={`panel-${issue.value}`} value={issue.value}>
           <h4>{issue.label}</h4>
-          <p>Lorem Ipsum...........</p>
+          {issue.subTabs && (
+            <>
+              <Tabs
+                value={subTabValue}
+                onChange={handleSubTabChange}
+                variant="scrollable"
+                scrollButtons="auto"
+                indicatorColor="primary"
+                textColor="primary"
+              >
+                {issue.subTabs.map((subTab) => (
+                  <Tab label={subTab.label} value={subTab.value} />
+                ))}
+              </Tabs>
+              <TabContext value={subTabValue}>
+                {issue.subTabs.map((subTab) => (
+                  <TabPanel value={subTab.value}>{subTab.content}</TabPanel>
+                ))}
+              </TabContext>
+            </>
+          )}
         </TabPanel>
       ))}
     </div>
