@@ -1,0 +1,27 @@
+.EmailForm {
+  padding: 30px;
+  background-color: #333842;
+
+  textarea,
+  textarea::before,
+  textarea::after,
+  input,
+  input::before,
+  input::after {
+    color: #bdc8e0;
+  }
+}
+
+.email-form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-info-inputs {
+  width: 100%;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

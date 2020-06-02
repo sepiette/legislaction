@@ -1,6 +1,7 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Container from '@material-ui/core/Container';
+import { EmailForm } from './components/EmailForm';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Container maxWidth="sm">
         <h1>legislaction</h1>
         <p>Spam your representatives</p>
+        <EmailForm emailTemplate="Lorem ipsum" />
       </Container>
     </div>
   );
