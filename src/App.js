@@ -8,11 +8,11 @@ import { DEFUND_NYPD_CONTENT } from './content/defund-nypd.content';
 
 const ISSUES = [
   {
-    label: 'Repeal 50a and the Police STAT Act',
-    value: 'repeal-bills',
+    ...DEFUND_NYPD_CONTENT,
   },
   {
-    ...DEFUND_NYPD_CONTENT,
+    label: 'Repeal 50a and the Police STAT Act',
+    value: 'repeal-bills',
   },
   {
     label: 'Other Issue',
@@ -21,7 +21,7 @@ const ISSUES = [
 ];
 
 function App() {
-  const [tabValue, setTabValue] = useState('repeal-bills');
+  const [tabValue, setTabValue] = useState('defund-nypd');
   const handleIssueView = (newVal) => {
     console.log('toggle', newVal);
     setTabValue(newVal);

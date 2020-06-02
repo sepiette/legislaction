@@ -20,7 +20,7 @@ const IssueToggler = (props) => {
   };
 
   return (
-    <div>
+    <div className="mt-40 mb-40">
       <h4> Choose an issue:</h4>
       <Tabs
         value={tabValue}

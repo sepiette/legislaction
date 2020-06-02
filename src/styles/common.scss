@@ -1,14 +1,28 @@
+@import './reset';
 @import './variables';
 @import './fonts/fonts';
 @import './spacing/margin';
 @import './spacing/padding';
 
-html, body {
+html,
+body {
   font-family: 'Barlow', Roboto, sans-serif;
   margin: 0;
   padding: 0;
 }
 
+a {
+  &:link,
+  &:visited {
+    letter-spacing: 0.1em;
+    line-height: 120%;
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 h1 {
   font-size: $font-h2;
@@ -38,6 +52,11 @@ select {
   letter-spacing: 0.1em;
   font-size: $font-body-lg;
   line-height: 150%;
+}
+
+p {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 @media screen and (min-width: $breakpoint-mobile) {
