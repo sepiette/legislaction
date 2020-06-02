@@ -34,3 +34,81 @@
   font-weight: 900;
   src: url('./Barlow_Condensed/BarlowCondensed-Black.ttf') format('truetype');
 }
+
+/************ FONT ALIGNMENT ************/
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/************ FONT STYLE *************/
+.text-italic {
+  font-style: italic;
+}
+
+/************ FONT BOLDNESS *************/
+.no-bold {
+  font-weight: 500;
+}
+
+.bold-600 {
+  font-weight: 600;
+}
+
+.bold-700 {
+  font-weight: 700;
+}
+
+.bold-800 {
+  font-weight: 800;
+}
+
+.bold-900 {
+  font-weight: 900;
+}
+
+/************ FONT SIZE CLASSES ***************/
+.title {
+  font-size: $font-title;
+}
+
+.headline-xl {
+  font-size: $font-h1;
+}
+
+.headline-lg {
+  font-size: $font-h2;
+}
+
+.headline-md {
+  font-size: $font-h3;
+}
+
+.headline-sm {
+  font-size: $font-h4;
+}
+
+.text-body-lg {
+  font-size: $font-body-lg;
+}
+
+.text-body {
+  font-size: $font-body-base;
+}
+
+.text-caption {
+  font-size: $font-caption;
+  line-height: 130%;
+}
+
+.text-pill {
+  font-size: $font-pill;
+  text-transform: uppercase;
+}
