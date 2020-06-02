@@ -1,0 +1,62 @@
+@import './variables';
+@import './fonts/fonts';
+@import './spacing/margin';
+@import './spacing/padding';
+
+html, body {
+  font-family: 'Barlow', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+h1 {
+  font-size: $font-h2;
+  line-height: 52px;
+}
+
+h2 {
+  font-size: $font-h3;
+  line-height: 39px;
+}
+
+h3 {
+  font-size: $font-h3;
+  line-height: 39px;
+}
+
+h4 {
+  font-size: $font-h4;
+  line-height: 28px;
+}
+
+p,
+label,
+span,
+input,
+select {
+  letter-spacing: 0.1em;
+  line-height: 150%;
+}
+
+@media screen and (min-width: $breakpoint-mobile) {
+  h1 {
+    font-size: $font-h1;
+    line-height: 65px;
+  }
+
+  h2 {
+    font-size: $font-h2;
+    line-height: 52px;
+  }
+
+  h3 {
+    font-size: $font-h3;
+    line-height: 39px;
+  }
+
+  h4 {
+    font-size: $font-h4;
+    line-height: 28px;
+  }
+}

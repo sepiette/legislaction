@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import './styles/common.scss';
 import Container from '@material-ui/core/Container';
 import { EmailForm } from './components/EmailForm';
 
